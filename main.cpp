@@ -60,6 +60,18 @@ int WinMain()
 	sf::Vector2f rectanglePosition3(600, 400);
 	rect3.setPosition(rectanglePosition3);
 
+	// Skapa box 4
+	sf::CircleShape rect4;
+	//rect3.setFillColor(sf::Color(117, 109, 71));
+	rect4.setFillColor(sf::Color::White);
+
+	// Bestäm storleken på objektet, i pixlar
+	rect4.setRadius(30.f);
+
+	// Skapa start-positionen för cirkel 1, 
+	sf::Vector2f rectanglePosition4(132, 520);
+	rect4.setPosition(rectanglePosition4);
+
 
 
 
@@ -76,6 +88,10 @@ int WinMain()
 	// Box 3 hastighet (pixlar / sekund)
 	float xVelocity3 = 1;
 	float yVelocity3 = 1;
+
+	// Cirkel 1 hastighet (pixlar / sekund)
+	float xVelocity4 = 2;
+	float yVelocity4 = 2;
 
 	// Slut på dom första variablerna
 
@@ -108,6 +124,9 @@ int WinMain()
 		if (rectanglePosition3.x < 0 || rectanglePosition3.x > 1280 - 40) xVelocity3 *= -1;
 		if (rectanglePosition3.y < 0 || rectanglePosition3.y > 720 - 20) yVelocity3 *= -1;
 
+		if (rectanglePosition4.x < 0 || rectanglePosition4.x > 1280 - 60) xVelocity4 *= -1;
+		if (rectanglePosition4.y < 0 || rectanglePosition4.y > 720 - 60) yVelocity4 *= -1;
+
 		rectanglePosition.x += xVelocity;
 		rectanglePosition.y += yVelocity;
 		rect.setPosition(rectanglePosition);
@@ -119,6 +138,10 @@ int WinMain()
 		rectanglePosition3.x += xVelocity3;
 		rectanglePosition3.y += yVelocity3;
 		rect3.setPosition(rectanglePosition3);
+
+		rectanglePosition4.x += xVelocity4;
+		rectanglePosition4.y += yVelocity4;
+		rect4.setPosition(rectanglePosition4);
 
 		// Plats för kollisions-funktionen
 
@@ -132,6 +155,7 @@ int WinMain()
 		window.draw(rect);
 		window.draw(rect2);
 		window.draw(rect3);
+		window.draw(rect4);
 
 		window.display();
 
