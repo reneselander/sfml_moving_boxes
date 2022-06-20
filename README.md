@@ -1,3 +1,2 @@
 # sfml_moving_objects
-[GUI] Program with some moving boxes inside a window. SFML graphics library (2.5.1).
-![moving_boxes](https://user-images.githubusercontent.com/50113423/174559045-3353ad1c-bab4-498b-875b-a760ae3264c6.png)
+[GUI] Program with some moving boxes inside a window. SFML graphics library (2.5.1).![moving_boxes](https://user-images.githubusercontent.com/50113423/174562578-95ce7d01-ba26-4688-a353-88e1b9399c32.png)
